@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Log In</title>
+  <link rel="icon" href="icon.png" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <link href="styk.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+         $("input:radio[name=gender]").click(function() {
+            var value = $(this).val();
+            var image_name;
+            if(value == 'male'){
+                image_name = "images/avatarm.jpeg";
+            }else{
+                if(value == 'female'){
+                    image_name = "images/avatarf.jpeg";
+                }else{
+                    image_name = "images/avatar.png";
+                }
+            }
+             $('#formula').attr('src', image_name);
+        });
+$("#login").click(function(){
+   var a = $('#email').val() ;
+       var b = $('#pwd').val() ;
+if (a == "" || b == "")
+{
+	$("#ale").append("oops...please the enter the details carefully") ;
+	$("#ale").addClass("alert alert-danger") ;
+        
+}
+else
+window.open("first.html") ;
+
+        }) ;
+
+$("#cancel").click(function(){
+window.open("main.html") ;
+}) ;
+}) ;
+</script>
+   
+
+</head>
+<body style="background-image: linear-gradient(to bottom right, #e2d1c3 , #fdfcfb ); background-repeat: no-repeat; background-attachment: fixed;">
+	
+		<div class="container-fluid">
+		
+			<nav class="navbar navbar-inverse">
+		<div class="container-fluid" id="head">
+    		<div class="navbar-header">
+        		<a class="navbar-brand" href="main.html" id="ar"><b>ARIKA</b></a>
+    		</div>
+    		<ul class="nav navbar-nav">
+			<li class="dropdown">
+ <div class="subnav">
+    <button class="subnavbtn"><a href="#">Products
+        <span class="caret"></span></a></button>
+    <div class="subnav-content">
+      <a href="#" data-toggle="modal" data-target="#myModal">Eyes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="#" data-toggle="modal" data-target="#myModal">Lips&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="#" data-toggle="modal" data-target="#myModal">Skin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </div> 
+			</li>
+      		<!--	<li><div class="subnav"><button class="subnavbtn"><a  data-toggle="modal" data-target="#myModal" id="d"><span class="glyphicon glyphicon-facetime-video"></span> Videos</a></button>
+ <div class="subnav-content">
+      <a href="#" data-toggle="modal" data-target="#myModal">Makeup Tutorials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="#" data-toggle="modal" data-target="#myModal">Professionals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="#" data-toggle="modal" data-target="#myModal">Skincare&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </div>
+			</li>          -->
+    		</ul>
+			<ul class="nav navbar-nav navbar-right">
+      			<li><a href="sign.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      			<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      			<li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>
+      			<li><a  data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      			<li><a href="about.html"> About Us</a></li>
+    		</ul>
+    		<form class="navbar-form navbar-left">
+      			<div class="input-group">
+       				<input type="text" class="form-control" placeholder="Search" name="search">
+        			<div class="input-group-btn">
+          				<button class="btn btn-default" type="submit">
+            				<span class="glyphicon glyphicon-search"></span>
+          				</button>
+					</div>
+      			</div>
+    		</form>
+  		</div>
+	</nav>
+
+
+	</div>
+
+<div class="well container"><center><img src="images/avatar.png" alt="avtar" id="formula" style="height:150px;width:200px"><br><button type="button" class="btn btn-default">Upload Profile Picture</button></center></div>
+<div class="container well">
+  <form >
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label><br>
+  <label for="male" class="radio-inline"><input type="radio" name="gender" id="male" value="male">Male</label>
+  <label for="female" class="radio-inline"><input type="radio" name="gender" id="female" value="female">Female</label>
+  <label for="other" class="radio-inline"><input type="radio" name="gender" id="other" value="other">Other</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember" checked> Remember me</label>
+    </div>
+      <button type="submit" class="btn btn-success btn-lg btn-block" id="login">Login</button><br>
+      <button type="button" class="btn btn-danger btn-lg btn-block" id="cancel">Cancel</button>
+  </form>
+ <div id="ale"></div>
+ 
+</div>
+<div class="container well">
+
+ <center> <a href="#" id="a">Forgot Password?</a></center>
+</div>
+<center>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" style="background-image: linear-gradient(to bottom right, #e2d1c3 , #fdfcfb ); background-repeat: no-repeat; background-attachment: fixed;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	<b><h1 class="modal-title" style="color:#B22222">ARIKA</h1></b>
+      </div>
+      <div class="modal-body">
+        <p  style="color:#B22222">please login our website for amazing offers!!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+  </div></center>
+ <script src="jquery-3.3.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+   <script src="arika.js"></script>
+
+</body>
+</html>

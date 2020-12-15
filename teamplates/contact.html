@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact Us</title>
+    <link rel="icon" href="icon.png" />
+	<link rel="STYLESHEET" type="text/css" href="styles.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="styk.css" rel="stylesheet">
+ 
+
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body style="background-image: linear-gradient(to bottom right, #e2d1c3 , #fdfcfb ); background-repeat: no-repeat; background-attachment: fixed;">
+<div class="container-fluid">
+
+		<nav class="navbar navbar-inverse">
+		<div class="container-fluid" id="head">
+    		<div class="navbar-header">
+        		<a class="navbar-brand" href="first.html" id="ar"><b>ARIKA</b></a>
+    		</div>
+    		<ul class="nav navbar-nav">
+			<li class="dropdown">
+ <div class="subnav">
+    <button class="subnavbtn"><a href="#">Products
+        <span class="caret"></span></a></button>
+    <div class="subnav-content">
+      <a  href="eye.html">Eyes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="lips.html">Lips&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a  href="skin.html">Skin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </div> 
+			</li>
+      		<!--	<li><div class="subnav"><button class="subnavbtn"><a><span class="glyphicon glyphicon-facetime-video"></span> Videos</a></button>
+ <div class="subnav-content">
+      <a  href="makeup.html">Makeup Tutorials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a  href="professional.html">Professionals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a h href="skincare.html">Skincare&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </div>
+			</li> -->
+    		</ul>
+			<ul class="nav navbar-nav navbar-right">
+      			<li><a href="sign.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      			<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      			<li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>
+      			<li><a href="pay.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      			<li><a href="about.html"> About Us</a></li>
+    		</ul>
+    		<form class="navbar-form navbar-left">
+      			<div class="input-group">
+       				<input type="text" class="form-control" placeholder="Search" name="search">
+        			<div class="input-group-btn">
+          				<button class="btn btn-default" type="submit">
+            				<span class="glyphicon glyphicon-search"></span>
+          				</button>
+					</div>
+      			</div>
+    		</form>
+  		</div>
+	</nav>
+
+
+	</div>
+
+<div class="container well">
+   <p class="h1-responsive font-weight-bold text-center my-4" style="font-family: aladin;font-size:60px;color: firebrick;">Contact us</p><br>
+    <p class="text-center w-responsive mx-auto mb-5" style="font-family: acme;font-size: 20px;">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p><br>
+
+<form  ng-app="myApp"  ng-controller="validateCtrl"
+name="myForm" novalidate>
+
+<p  style="font-family: acme;font-size: 20px;">Username:<br>
+  <input type="text" name="user" ng-model="user"  class="form-control" required id="a">
+  <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+  <span ng-show="myForm.user.$error.required">Username is required.</span>
+  </span>
+</p>
+
+<p  style="font-family: acme;font-size: 20px;">Email:<br>
+  <input type="email" name="email" ng-model="email"  class="form-control" required id="b">
+  <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+  </span>
+</p>
+
+<p  style="font-family: acme;font-size: 20px;">Phone Number:<br>
+  <input type="number" name="number" ng-model="number"  class="form-control" required> 
+</p>
+
+<p  style="font-family: acme;font-size: 20px;">Subject:<br>
+  <input type="text" name="msg" ng-model="msg"  class="form-control" required > 
+</p>
+
+<p  style="font-family: acme;font-size: 20px;">Message:<br>
+  <textarea name="sub" ng-model="sub"  class="form-control"  rows="4" cols="4" required id="c"></textarea>
+  <span style="color:red" ng-show="myForm.sub.$dirty && myForm.sub.$invalid">
+  <span ng-show="myForm.sub.$error.required">Message is required.</span>
+  </span>
+</p>
+<br>
+<p>
+  <center><button type="button" class="btn btn-primary" ng-disabled="!sub || !email || !user" onclick="alert('message has been sent successfully!')">Send</button></center>
+</p>
+
+</form>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+ 
+});
+</script>
+
+ <script src="jquery-3.3.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
